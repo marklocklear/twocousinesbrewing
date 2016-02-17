@@ -1,7 +1,7 @@
 server '104.236.115.35', port: 22, roles: [:web, :app, :db], primary: true
 
-set :repo_url,        'git@github.com:marklocklear/twocousinesbrewing.git'
-set :application,     'twocousinesbrewing'
+set :repo_url,        'git@github.com:marklocklear/twocousinsbrewing.git'
+set :application,     'twocousinsbrewing'
 set :user,            'deploy'
 set :puma_threads,    [4, 16]
 set :puma_workers,    0
