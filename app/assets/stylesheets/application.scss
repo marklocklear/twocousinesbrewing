@@ -1,0 +1,222 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import url(https://fonts.googleapis.com/css?family=Kanit:400,900);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+$brand-font-family: 'Kanit', sans-serif;
+$body-font-family: 'Open Sans', sans-serif;
+$body-font-color: #340E0A;
+
+/*** RESPONSIVE BREAKPOINTS ***/
+$breakpoint-widescreen: 1200px;
+$breakpoint-desktop: 992px;
+$breakpoint-tablet: 768px;
+$breakpoint-phone: 480px;
+$breakpoint-custom-iPhoneRetina: 320px;
+
+/*** MEDIA QUERIES ***/
+/* Custom, iPhone Retina */ 
+@media only screen and (min-width : $breakpoint-custom-iPhoneRetina) {
+	html, body, main {
+		height: 100%;
+	}
+
+	body {
+		background: #7E4F2F;
+		font-family: $body-font-family;
+		margin: 0;
+		padding: 0;
+		color: $body-font-color;
+	}
+
+	main {
+		width: 100%;
+		min-height: 100%;
+		height: auto !important;
+		background: url(main-bg-medium.jpg) #DD9561;
+		background-size: cover;
+	}
+
+	h1, h2 {
+		font-family: $brand-font-family;
+		text-transform: uppercase;
+		overflow: hidden;
+	}
+
+	h1 {
+		max-width: 90%;
+		font-size: 32px;
+		font-weight: 900;
+		padding: 50px 15px 25px;
+	}
+
+	h2 {
+	  text-indent: 100%;
+		font-weight: 400;
+		font-size: 28pt;
+		background: url("coming-soon.png") center 0 no-repeat;
+		width: 300px;
+		white-space: nowrap;
+	}
+
+	h3 {
+		font-weight: 800;
+		font-size: 16pt;
+	}
+
+	footer {
+		color: darken($body-font-color, 15%);
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		height: 50px;
+		text-align: center;
+		padding: 15px 0;
+
+		@media only screen and (max-height : 540px) {
+			position: relative;
+		}
+	}
+
+	#brand-icons, h1, h2 {
+		display: block;
+		margin: 0 auto;
+	}
+
+	#brand-icons {
+		max-width: 280px;
+	}
+
+	h1, footer, #subscribe {
+		text-align: center;
+	}
+
+	#subscribe {
+		margin: 50px auto 25px;
+
+		form {
+			width: 280px;
+			margin: 0 auto;
+
+			input.form-control {
+				width: 240px; 
+				margin: 0 auto;
+			}
+		}
+
+		input {
+			text-align: center;
+			border: 4px solid #340E0A;
+		}
+
+		.btn {
+			margin-top: 15px;
+			background: $body-font-color;
+			border: 2px solid #000;
+			color: #EEE;
+			font-weight: 800;
+		}
+	}
+
+	.glyphicon-envelope {
+		position:relative;
+		font-size: 28pt;
+		float: left;
+		top: -1px;
+	}
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width : $breakpoint-phone) {
+	h1 {
+		font-size: 32pt;
+		padding: 120px 10px 30px;
+	}
+
+	h2 {
+		width: 375px;
+		background: url("coming-soon.png") 0 0 no-repeat;
+		white-space: nowrap;
+	}
+
+	#subscribe {
+		form {
+			width: 380px;
+
+			input.form-control {
+				width: 340px; 
+			}
+		}
+	}
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : $breakpoint-tablet) {
+	h1 {
+		font-size: 42pt;
+		white-space: nowrap;
+	}
+
+	#subscribe {
+		form {
+			width: 482px;
+
+			.btn {
+				margin: initial;
+			}
+
+			.glyphicon-envelope {
+				top: 0;
+			}
+		}
+	}
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : $breakpoint-desktop) {
+		
+	main {
+		width: 980px;
+		height: 680px;
+		min-height: 0;
+		padding-bottom: 150px;
+		margin: 0 auto;
+		background: url(main-bg.jpg) #DD9561;
+		background-repeat: no-repeat;
+		background-size: auto;
+		border: 1px solid #67351a;
+		-moz-box-shadow: 4px 5px 5px 5px #3A1708;
+		-webkit-box-shadow: 4px 5px 5px 5px #3A1708;
+		-webkit-border-bottom-right-radius: 15px;
+	}
+
+	h1 {
+		font-size: 44pt;
+	}
+
+	.glyphicon-envelope {
+		padding-right: 2px;
+	}
+
+	footer {
+		color: $body-font-color;
+		position: relative;
+		top: 150px;
+	}
+}

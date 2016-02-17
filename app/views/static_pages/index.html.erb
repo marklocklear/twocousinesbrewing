@@ -1,0 +1,19 @@
+
+<heading>
+	<h1>Two Cousins Brewing</h1>
+</heading>
+<section>
+	<h2>Coming Soon</h2>
+	<%= image_tag("brand-icons3.png", alt:"Grapes plus beer equals happiness", id:"brand-icons") %>
+	<div id="subscribe">
+		<h3>Stay tuned and get early updates via email</h3>
+		<br>
+		<%= bootstrap_form_tag url: "/index", layout: :inline do |f| %>
+			<span class="glyphicon glyphicon-envelope"></span>
+			<%= f.email_field :email, hide_label: true, placeholder: "you@example.com", autofocus: true %>
+			<%= f.form_group do %>
+				<%= f.submit "Subscribe" %>
+			<% end %>
+		<% end %>
+	</div>
+</section>
