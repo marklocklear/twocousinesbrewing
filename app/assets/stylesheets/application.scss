@@ -70,7 +70,7 @@ $breakpoint-custom-iPhoneRetina: 320px;
 	  text-indent: 100%;
 		font-weight: 400;
 		font-size: 28pt;
-		background: url(coming-soon.png) center 0 no-repeat;
+		background: asset-url(coming-soon.png) center 0 no-repeat;
 		width: 300px;
 		white-space: nowrap;
 	}
@@ -151,7 +151,7 @@ $breakpoint-custom-iPhoneRetina: 320px;
 
 	h2 {
 		width: 375px;
-		background: url(coming-soon.png) 0 0 no-repeat;
+		background: asset-url(coming-soon.png) 0 0 no-repeat;
 		white-space: nowrap;
 	}
 
