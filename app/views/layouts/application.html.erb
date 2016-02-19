@@ -10,7 +10,9 @@
 </head>
 <body>
 	<main>
-
+ <% flash.each do |key, value| %>
+        <div class="alert alert-<%= key %>"><%= value %></div>
+      <% end %>
 		<%= yield %>
 
 		<footer>&copy;2016 Two Cousins Brewing</footer>

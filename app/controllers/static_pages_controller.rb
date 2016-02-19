@@ -1,7 +1,12 @@
 class StaticPagesController < ApplicationController
   def index
-  	#danger - did not whitelist
+  end
+
+  def get_email
+		#danger - did not whitelist
   	MailList.create email: params[:email]
+  	# flash[:success] = "Welcome to the Sample App!"
+  	redirect_to root_url
   end
 
   private

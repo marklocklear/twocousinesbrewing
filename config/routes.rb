@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   get 'static_pages/index'
-  post 'static_pages/index'
+  post 'static_pages/get_email'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
