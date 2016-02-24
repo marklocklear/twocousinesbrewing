@@ -6,7 +6,8 @@ class StaticPagesController < ApplicationController
 		#danger - did not whitelist
   	MailList.create email: params[:email]
   	# flash[:success] = "Welcome to the Sample App!"
-  	redirect_to root_url
+  	redirect_to root_url, alert: "Signed up successfully!"
+    WelcomeMailer.welcome(params[:email]).deliver_now
   end
 
   private
