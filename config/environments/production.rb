@@ -80,13 +80,13 @@ Rails.application.configure do
 
   #mail config; these are set in 
   config.action_mailer.smtp_settings = {
-    address: ENV.fetch("SMTP_ADDRESS"),
+    address: Rails.application.secrets.SMTP_ADDRESS,
     authentication: :plain,
-    domain: ENV.fetch("SMTP_DOMAIN"),
+    domain: Rails.application.secrets.SMTP_DOMAIN,
     enable_starttls_auto: true,
-    password: ENV.fetch("SMTP_PASSWORD"),
+    password: Rails.application.secrets.SMTP_PASSWORD,
     port: "587",
-    user_name: ENV.fetch("SMTP_USERNAME")
+    user_name: Rails.application.secrets.SMTP_USERNAME
   }
   config.action_mailer.default_url_options = { host: ENV["SMTP_DOMAIN"] }
 end
